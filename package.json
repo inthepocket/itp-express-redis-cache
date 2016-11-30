@@ -1,0 +1,20 @@
+{
+  "name": "itp-express-redis-cache",
+  "version": "1.0.0",
+  "description": "A light api cache system with Redis for Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "redis",
+    "cache",
+    "itp",
+    "node.js",
+    "caching",
+    "api"
+  ],
+  "author": "In The Pocket",
+  "license": "MIT"
+}
