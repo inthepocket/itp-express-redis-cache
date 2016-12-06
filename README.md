@@ -48,6 +48,15 @@ ITPExpressRedisCache.route({
 })
 ```
 
+The route key parameter can also be a function:
+
+```javascript
+ITPExpressRedisCache.route({
+  key: (req) => `custom-key:${req.originalUrl}`, // custom function
+  expire: 120, // expiration time in seconds
+})
+```
+
 ## Supported env variables
 
 - REDIS_HOST
