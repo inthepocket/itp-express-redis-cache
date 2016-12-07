@@ -1,10 +1,14 @@
 {
   "name": "itp-express-redis-cache",
   "version": "1.0.0",
-  "description": "A light api cache system with Redis for Express",
+  "description": "A light api route cache system with Redis for Express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inthepocket/itp-express-redis-cache"
   },
   "keywords": [
     "express",
@@ -16,5 +20,8 @@
     "api"
   ],
   "author": "In The Pocket",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "redis": "~2.6.3"
+  }
 }
