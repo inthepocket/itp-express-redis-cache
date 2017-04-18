@@ -36,6 +36,7 @@ const ITPExpressRedisCache = require('itp-express-redis-cache')({
   authPass: null, // redis pass
   prefix: 'my-sample-app', // redis key prefix, e.g. 'my-sample-app:route:GET:/'
   enabled: true, // disable/enable route caching, for example in debug mode
+  excludeStatuscodes: 500, // disable response caching based on response statuscode. Possible values: number, array, function (excludes 500 and higher by default)
 });
 ```
 
