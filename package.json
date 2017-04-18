@@ -4,6 +4,7 @@
   "description": "A light api route cache system with Redis for Express",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . || exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "author": "In The Pocket",
   "license": "MIT",
   "dependencies": {
+    "eslint-config-itp-base": "^1.0.0",
     "redis": "~2.6.3"
   }
 }
