@@ -36,6 +36,20 @@ const ITPExpressRedisCache = require('itp-express-redis-cache')({
   authPass: null, // redis pass
   prefix: 'my-sample-app', // redis key prefix, e.g. 'my-sample-app:route:GET:/'
   enabled: true, // disable/enable route caching, for example in debug mode
+  excludeStatuscodes: 500, // disable response caching based on response statuscode. Possible values: number, array, function (excludes 500 and higher by default)
+});
+```
+
+The excludeStatuscodes parameter can also be an array:
+
+```javascript
+const ITPExpressRedisCache = require('itp-express-redis-cache')({
+  port: 6379,
+  host: 'localhost',
+  authPass: null,
+  prefix: 'my-sample-app',
+  enabled: true,
+  excludeStatuscodes: [404, 406, 408, 410], // disable response caching based on response statuscode. Possible values: number, array, function (excludes 500 and higher by default)
 });
 ```
 
@@ -54,6 +68,15 @@ The route key parameter can also be a function:
 ITPExpressRedisCache.route({
   key: (req) => `custom-key:${req.originalUrl}`, // custom function
   expire: 120, // expiration time in seconds
+})
+```
+
+The expire parameter can also be a function:
+
+```javascript
+ITPExpressRedisCache.route({
+  key: (req) => `custom-key:${req.originalUrl}`, // custom function
+  expire: (req) => 120 + 4, // expiration time in seconds
 })
 ```
 
