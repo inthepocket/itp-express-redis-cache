@@ -80,6 +80,26 @@ ITPExpressRedisCache.route({
 })
 ```
 
+## Application-level middleware
+
+Simply use `app.use` of express to use `ITPExpressRedisCache` as an Application-level middleware.
+
+```javascript
+app.use(ITPExpressRedisCache.route())
+```
+
+## Disable Caching inside the Route
+
+You can disable caching for specific routes by adding `res.skipCache = true` to opt out the route from getting cached.
+
+```javascript
+app.get('/:paramKey', function (req, res) {
+    res.skipCache = (paramKey === 1300);
+    res.send("Hello");
+});
+```
+
+
 ## Supported env variables
 
 - REDIS_HOST
