@@ -34,7 +34,7 @@ const ITPExpressRedisCache = require('itp-express-redis-cache')({
   port: 6379, // redis port
   host: 'localhost', // redis host
   authPass: null, // redis pass
-  db: 1, // redis database id
+  db: 0, // redis database id
   prefix: 'my-sample-app', // redis key prefix, e.g. 'my-sample-app:route:GET:/'
   enabled: true, // disable/enable route caching, for example in debug mode
   excludeStatuscodes: 500, // disable response caching based on response statuscode. Possible values: number, array, function (excludes 500 and higher by default)
@@ -48,7 +48,7 @@ const ITPExpressRedisCache = require('itp-express-redis-cache')({
   port: 6379,
   host: 'localhost',
   authPass: null,
-  db: 1,
+  db: 0,
   prefix: 'my-sample-app',
   enabled: true,
   excludeStatuscodes: [404, 406, 408, 410], // disable response caching based on response statuscode. Possible values: number, array, function (excludes 500 and higher by default)
