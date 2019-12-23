@@ -1,5 +1,7 @@
 # ITP Express Redis Cache
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/inthepocket/itp-express-redis-cache.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-version-image]][npm-url] [![MIT License][license-image]][license-url]
 
 A light api route cache system with Redis for Express.js
