@@ -24,6 +24,6 @@
   "license": "MIT",
   "dependencies": {
     "eslint-config-itp-base": "^1.0.0",
-    "redis": "~2.6.3"
+    "redis": "~2.8.0"
   }
 }
